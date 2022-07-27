@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
     <title>To do List</title>
 </head>
 
@@ -13,15 +14,15 @@
         
     <main class="to-do-list">
         <h1>TodoList</h1>
-        <div class="">
-            <label for="add-tast">Ajouter une nouvelle tache</label>
-            <input type="text" id="add-task" name="new-task">
-            <button id="ad" class="add-task-btn">Ajouter</button>
+        <div class="add-task">
+            <input type="text" class="add-task-input" id="add-task-input" name="new-task" placeholder="Ajouter une nouvelle tache">
+            <button id="add-task-btn" class="add-task-btn">Ajouter</button>
         </div>
         <ul id="task-list" class="task-list">
             <li>
                 <div class="task-itm">
                     <h2>tache 1</h2>
+                    <button><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </li>
         </ul>
