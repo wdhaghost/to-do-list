@@ -107,6 +107,12 @@ button:focus {
     align-items: center;
     padding: 1rem;
 }
+.task-itm.complete{
+    background-color: grey;
+}
+.task-title.complete{
+    text-decoration:line-through;
+}
 .del-task-btn{
     font-size:1.5rem ;
     color: black;
