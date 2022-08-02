@@ -111,7 +111,7 @@ button:focus {
     background-color: grey;
 }
 .task-title.complete{
-    text-decoration:line-through;
+    text-decoration:3px solid line-through;
 }
 .del-task-btn{
     font-size:1.5rem ;
