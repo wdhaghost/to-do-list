@@ -28,30 +28,31 @@ function addTask() {
             taskList.insertBefore(createTask(),taskList.firstElementChild)
         }
         
-        manageTask()
+        manageTask(createTask())
     }
 }
 function createTask(){
     const task=document.createElement("li")
     task.id=count
     task.innerHTML =`<div class="task-itm"><h2 class="task-title">${newTask.value}</h2><button data-id="${count}"class="del-task-btn"><i class="fa-solid fa-xmark"></i></button></div>`
-    return task
+    
+   return task
 }
 
-function manageTask() {
-    const taskItm = document.querySelectorAll("#task-list .task-itm")
-    const delBtns = document.querySelectorAll("#task-list .del-task-btn")
-    taskItm.forEach(itm => {
-        itm.addEventListener("click", function (event) {
+function manageTask(task) {
+    const taskId=task.id
+    const delBtn=document.querySelector(`button[data-id="${taskId}"]`)
+    const div =document.getElementById(`${taskId}`).firstElementChild
+        div.addEventListener("click", function (event) {
             completeTask(this)
         })
-    });
-    delBtns.forEach(delBtn => {
+
+
         delBtn.addEventListener("click", function (event) {
             delTask(this.dataset.id)
 
         })
-    })
+
 }
 
 function delTask(id) {
